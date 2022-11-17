@@ -1,0 +1,277 @@
+@import "variables";
+@import "reset";
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background: $g-color;
+    box-shadow: -4px 8px 15px -3px rgba(0,0,0,0.1);
+    &__box-img {
+        width: 8%;
+        margin: 8px 16px;
+    }
+    &__ul {
+        width: 40%;
+        justify-content: space-evenly;
+        display: flex;
+    }
+    &__li {
+        &--a {
+            font-size: 1.8rem;
+            font-weight: 700;
+            padding: 6px 12px;            
+        }
+        &--login {
+            color: $s-color;
+            background: $p2-color;
+            padding: 6px 12px;
+        }
+    }
+}
+
+.mainHeader {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    line-height: 11rem;
+    font-size: 5rem;
+    margin-top: 10rem;
+    overflow: hidden;
+    strong {
+        font-size: 11rem;
+        color: $s-color;
+        text-shadow: 2px 2px 0px $p-color;
+        display: inline-block;
+        margin: 0 0.5rem;
+        animation: backInLeft;
+        -webkit-animation: backInLeft;
+        animation-duration: 2s;
+    }
+    span {
+        display: inline-block;
+        margin: 0 0.5rem;
+        animation: backInRight;
+        -webkit-animation: backInRight;
+        animation-duration: 1.5s;
+}
+    h1 {
+        font-size: 12rem;
+        text-shadow: 2px 2px 0px $s-color;
+        display: inline-block;
+        margin: 0 0.5rem;
+        animation: fadeInRight;
+        -webkit-animation: fadeInRight;
+        animation-duration: 2s;
+}
+}
+
+.btn-referir {
+    width: 20%;
+    margin: 20px auto;
+    font-size: 3rem;
+    padding: 16px 12px;
+    text-align: center;
+    background: $s-color;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    &__title {
+        font-size: $title;
+        text-align: center;
+        margin: 60px auto;
+    }
+}
+
+.form-refer {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    width: 70%;
+    max-width: 960px;
+    // height: 70vh;
+    margin: 20px auto;
+    border: 3px groove $s-color;
+    &__section {
+        font-size: 1.8rem;
+        width: 50%;
+        height: auto;
+        margin: 6px 0;
+        text-align: center;
+        overflow-y: auto;
+        &--left {
+            border-right: 1px solid $s-color;
+        }
+        h1 {
+            margin: 18px 0 32px 0;
+        }
+    }
+}
+
+// INPUTS FORMULARIO
+.form__group {
+    position: relative;
+    padding: 18px 0 0;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+    &--file {
+        font-size: 1.4rem;
+        margin-top: 24px;
+    }
+  }
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid $g2-color;
+    outline: 0;
+    font-size: 1.4rem;
+    color: $p-color;
+    padding: 7px 0;
+    background: transparent;
+    -webkit-transition: border-color 0.2s;
+    transition: border-color 0.2s;
+    &::-webkit-input-placeholder {
+        color: transparent;
+    }
+    &::-moz-placeholder {
+        color: transparent;
+    }
+    &:-ms-input-placeholder {
+        color: transparent;
+    }
+    &::-ms-input-placeholder {
+        color: transparent;
+    }
+    &::placeholder {
+        color: transparent;
+    }
+    &:-moz-placeholder-shown ~ .form__label {
+        font-size: 17px;
+        cursor: text;
+        top: 20px;
+    }
+    &:-ms-input-placeholder ~ .form__label {
+        font-size: 17px;
+        cursor: text;
+        top: 20px;
+    }
+    &:placeholder-shown ~ .form__label {
+        font-size: 17px;
+        cursor: text;
+        top: 20px;
+    }
+    &:focus {
+        padding-bottom: 6px;
+        font-weight: 700;
+        border-width: 3px;
+        -o-border-image: linear-gradient(to right, $p-color, $p2-color);
+           border-image: -webkit-gradient(linear, left top, right top, from($p-color), to($p2-color));
+           border-image: linear-gradient(to right, $p-color, $p2-color);
+        border-image-slice: 1;
+    }
+    &:focus ~ .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
+        font-size: 17px;
+        color: #38caef;
+        font-weight: 700;
+    }
+    &:required, .form__field:invalid {
+        -webkit-box-shadow: none;
+                box-shadow: none;
+    }
+  }
+
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    font-size: 17px;
+    color: $g2-color;
+    pointer-events: none;
+  }
+
+.btn-send {
+display: block;
+margin: 18px auto;
+color: $w-color;
+font-size: 1.6rem;
+padding: 10px 30px;
+background: $s-color;
+cursor: pointer;
+border-radius: 18px;
+-webkit-border-radius: 18px;
+-moz-border-radius: 18px;
+-ms-border-radius: 18px;
+-o-border-radius: 18px;
+}
+.bx-estados {
+    width: 100%;
+    min-height: 380px;
+}
+.estado {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    &__grid--titulo {
+        border: 1px solid $s-color;
+        font-size: 1.4rem;
+        font-style: italic;
+        font-weight: 400;
+    }
+}
+
+.tabla-estados {
+    margin: auto;
+    width: 100%;
+}
+
+.form__select {
+    width: 100%;
+    margin: 20px auto 5px;
+    max-width: 300px;
+    border-bottom: 2px solid $g2-color;
+    outline: none;
+}
+
+.bx-login {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+.form-login {
+    width: 30%;
+    margin: auto;
+    padding: 12px 18px;
+    border: 3px groove $s-color;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    h1 {
+        font-size: 4rem;
+        text-align: center;
+        margin: 18px auto 36px;
+    }
+}

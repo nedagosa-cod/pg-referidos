@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head.ejs') %> 
+    <title><%= title%></title>
+</head>
+<body>
+    <%- include('partials/navBar.ejs') %>
+    <main class="main">
+        <form action="" class="form-refer">
+
+            <section class="form-refer__section form-refer__section--left">
+                <h1>Datos de quien refiere</h1>
+                <div class="form__group field">
+                    <input required="" placeholder="Name" class="form__field" type="input">
+                    <label class="form__label" for="name">Nombre completo</label>
+                </div>
+                <div class="form__group field">
+                    <input required="" placeholder="Name" class="form__field" type="input">
+                    <label class="form__label" for="name">Número de documento</label>
+                </div>
+                <div class="form__group field">
+                    <input required="" placeholder="Name" class="form__field" type="input">
+                    <label class="form__label" for="name">Número de teléfono</label>
+                </div>                
+                <select name="antiguedad" id="" class="form__select">
+                    <option value="">Seleccionar Antiguedad</option>
+                    <option value="Nuevo - En formación inicial">Nuevo - En formación inicial</option>
+                    <option value="Antiguo - En operación">Antiguo - En operación</option>
+                </select>
+                <select name="antiguedad" id="" class="form__select">
+                    <option value="">Campaña a la que perteneces</option>
+                    <option value="Claro Colombia">Claro Colombia</option>
+                    <option value="Telefonica Colombia">Telefonica Colombia</option>
+                    <option value="Telefónica Ventas">Telefónica Ventas</option>
+                    <option value="Telefónica Chile">Telefónica Chile</option>
+                    <option value="Ventas Multisector">Ventas Multisector</option>
+                    <option value="Servicio Multisector">Servicio Multisector</option>
+                </select>
+                <select name="antiguedad" id="" class="form__select">
+                    <option value="">Sede Actual</option>
+                    <option value="Bogotá Sede Royal">Bogotá Sede Royal</option>
+                    <option value="Bogotá Sede Dorado">Bogotá Sede Dorado</option>
+                    <option value="Bogotá Sede Telares">Bogotá Sede Telares</option>
+                    <option value="Bogotá Sede Floresta">Bogotá Sede Floresta</option>
+                    <option value="Bogotá Sede Elemento">Bogotá Sede Elemento</option>
+                    <option value="Pereira Tres nevados">Pereira Tres nevados</option>
+                    <option value="Pereira Olaya">Pereira Olaya</option>
+                    <option value="Medellín Guayabal">Medellín Guayabal</option>
+                </select>
+                <select name="antiguedad" id="" class="form__select">
+                    <option value="">Coordinador de formación a cargo</option>
+                    <option value="GLADYS LILIANA HERRERA OLAYA">GLADYS LILIANA HERRERA OLAYA</option>
+                    <option value="JHON JAIRO GIRALDO RODRIGUEZ">JHON JAIRO GIRALDO RODRIGL</option>
+                    <option value="YENNY LORENA MESA DELGADO">YENNY LORENA MESA DELGADO</option>
+                    <option value="YULIETH PAOLA NIETO RODRIGUEZ">YULIETH PAOLA NIETO RODRIGUEZ</option>
+                    <option value="RICARDO SILVA RODRIGUEZ">RICARDO SILVA RODRIGUEZ</option>
+                    <option value="JHONNY ALEXANDER VARELA RUSINQUE">JHONNY ALEXANDER VARELA RUSINQUE</option>
+                    <option value="SANDRA MILENA PAEZ PATINO">SANDRA MILENA PAEZ PATINO</option>
+                    <option value="CRISTIAN ANDRES TORRES PALACIO">CRISTIAN ANDRES TORRES PALACIO</option>
+                    <option value="BLEYDY ANDREA HERNANDEZ ROJAS">BLEYDY ANDREA HERNANDEZ ROJAS</option>
+                    <option value="BLEYDY ANDREA HERNANDEZ ROJAS">BLEYDY ANDREA HERNANDEZ ROJAS</option>
+                    <option value="BRAYAM STEVEN ORTIZ MERCHAN">BRAYAM STEVEN ORTIZ MERCHAN</option>
+                    <option value="CRISTIAN ANDRES VEGA MENDIVELSO">CRISTIAN ANDRES VEGA MENDIVELSO</option>
+                    <option value="JULIAN MANUEL MARTINEZ">JULIAN MANUEL MARTINEZ</option>
+                    <option value="JUAN SEBASTIAN VASQUEZ SANCHEZ">JUAN SEBASTIAN VASQUEZ SANCHEZ</option>
+                </select>                                
+            </section>
+
+            <section class="form-refer__section">
+                <h1>Datos del referido</h1>
+                <div class="form__group field">
+                    <input required="" placeholder="Name" class="form__field" type="input">
+                    <label class="form__label" for="name">Nombre completo</label>
+                </div>
+                <div class="form__group field">
+                    <input required="" placeholder="Name" class="form__field" type="input">
+                    <label class="form__label" for="name">Números de teléfono</label>
+                </div>
+                <div class="form__group field">
+                    <input required="" placeholder="Name" class="form__field" type="input">
+                    <label class="form__label" for="name">Campaña de interés</label>
+                </div>
+                <div class="form__group field">
+                    <input required="" placeholder="Name" class="form__field" type="input">
+                    <label class="form__label" for="name">Cual sedes se le facilita trasladarse</label>
+                </div>
+                <div class="form__group field">
+                    <span>Si cuentas con la HV de la persona, adjunta el documento</span>
+                    <input type="file" class="form__group--file">
+                </div>
+           
+            </section>
+            <button type="submit" class="btn-send">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
