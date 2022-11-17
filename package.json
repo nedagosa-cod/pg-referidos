@@ -25,6 +25,7 @@
     "express": "^4.18.2",
     "gridjs": "^5.1.0",
     "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
     "mysql2": "^2.3.3"
   },
   "devDependencies": {
