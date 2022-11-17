@@ -14,9 +14,19 @@ app.set("view engine", "ejs");
 app.use(indexRoutes);
 app.use(express.static(join(__dirname, "public")));
 
+app.get("/", async (req, res) => {
+    const [rows] = await pool.query('SELECT * FROM users ');
+    res.json(rows)
+});
+
 app.get("/ping", async (req, res) => {
     const [result] = await pool.query(`SELECT "hello world" as RESULT`);
     res.json(result[0])
+});
+
+app.get("/create", async (req, res) => {
+    const createResult = await pool.query('INSERT INTO users(name) VALUES ("NESTOR")');
+    res.json(createResult)
 });
 
 app.listen(PORT);
