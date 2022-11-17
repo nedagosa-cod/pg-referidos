@@ -1,12 +1,12 @@
 import mysql from 'mysql2'
-import {DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT} from './config.js'
+// import {DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT} from './config.js'
 
 const conn = mysql.createConnection({
-    user: DB_USER,
-    password: DB_PASSWORD,
-    host: DB_HOST,
-    port: DB_PORT,
-    database: DB_NAME
+    user: 'root',
+    password: 'x3biFuSnXRnchFQIB4gG',
+    host: 'containers-us-west-118.railway.app',
+    port: 5630,
+    database: 'railway'
 })
 
 conn.connect(function(err){
