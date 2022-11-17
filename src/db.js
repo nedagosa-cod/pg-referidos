@@ -15,7 +15,7 @@ conn.connect(function(err){
 console.log('conexion exitosa')
 
 conn.query('SELECT * from users', (err, rows) => {
-    if (err) throw console.log('Error al cargar la base de datos:' + err.stack);
+    if (err) throw console.log('Error al cargar base de datos:' + err.stack);
     console.log('Datos de la tabla:')
     console.log(rows[0])
 })
