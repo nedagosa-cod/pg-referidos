@@ -10,11 +10,15 @@ const conn = mysql.createConnection({
 })
 
 conn.connect(function(err){
-    if (err) {
-        console.log('Error al cargar base de datos:' + err.stack);
-        return
-    }
-    console.log('conexion exitosa')
+    if (err) throw console.log('Error al cargar base de datos:' + err.stack);
+})
+console.log('conexion exitosa')
+
+conn.query('SELECT * from users', (err, rows) => {
+    if (err) throw console.log('Error al cargar base de datos:' + err.stack);
+    console.log('Datos de la tabla:')
+    console.log(rows[0])
 })
 
 export {conn}
+conn.end()
