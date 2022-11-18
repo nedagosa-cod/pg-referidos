@@ -19,19 +19,23 @@
         <table class="table-estado">
             <thead>
                 <th>ID</th>
-                <th>NOMBRE</th>
-                <th>DOCUMENTO</th>
-                <th>TELEFONO</th>
-                <th>ANTIGUEDAD</th>
+                <th>FECHA REGISTRO</th>
+                <th>NOMBRE REFERIDO</th>
+                <th>TELEFONOS REFERIDO</th>
+                <th>CAMPAÑA INTERES</th>
+                <th>SEDE</th>
+                <th>ESTADO</th>
             </thead>
             <tbody>
                 <% resultado.forEach((datos) => { %>
                     <tr>
                         <td><%= datos.id %></td>
-                        <td><%= datos.name %></td>
-                        <td><%= datos.documento %></td>
-                        <td><%= datos.Telefono %></td>
-                        <td><%= datos.Antiguedad %></td>
+                        <td><%= datos.fecha %></td>
+                        <td><%= datos.nombre_r %></td>
+                        <td><%= datos.telefono_r %></td>
+                        <td><%= datos.campana_r %></td>
+                        <td><%= datos.sede_r %></td>
+                        <td><%= datos.estado %></td>
                     </tr>
                 <% }); %>
             </tbody>
