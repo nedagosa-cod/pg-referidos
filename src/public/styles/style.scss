@@ -28,6 +28,9 @@
             background: $p2-color;
             padding: 6px 12px;
         }
+        &--block {
+            display: none;
+        }
     }
 }
 
@@ -89,6 +92,7 @@
         font-size: $title;
         text-align: center;
         margin: 60px auto;
+        width: 100%;
     }
 }
 
@@ -273,5 +277,22 @@ border-radius: 18px;
         font-size: 4rem;
         text-align: center;
         margin: 18px auto 36px;
+    }
+}
+
+.table-estado {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    border: 1px solid red;
+    th {
+        border: 1px solid $s-color;
+        background: $s2-color;
+        font-size: 1.4rem;
+    }
+    td {
+        text-align: center;
+        border: 1px solid $s-color;
+        font-size: 1.2rem;
     }
 }

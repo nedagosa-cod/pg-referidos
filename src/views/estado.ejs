@@ -15,7 +15,27 @@
     <%- include('partials/navBar.ejs') %>
     <main class="main">
         <h1 class="main__title">Verificación de estado de referido</h1>
-        <div id="table" class="tabla-estados"></div>
+        <!-- <div id="table" class="tabla-estados"></div> -->
+        <table class="table-estado">
+            <thead>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>DOCUMENTO</th>
+                <th>TELEFONO</th>
+                <th>ANTIGUEDAD</th>
+            </thead>
+            <tbody>
+                <% resultado.forEach((datos) => { %>
+                    <tr>
+                        <td><%= datos.id %></td>
+                        <td><%= datos.name %></td>
+                        <td><%= datos.documento %></td>
+                        <td><%= datos.Telefono %></td>
+                        <td><%= datos.Antiguedad %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
     </main>
 </body>
 </html>

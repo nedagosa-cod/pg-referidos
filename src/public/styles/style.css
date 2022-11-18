@@ -134,6 +134,13 @@ label {
 }
 
 /* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /* Evitamos problemas con los SVG */
 svg {
   width: 100%;
@@ -167,6 +174,9 @@ svg {
   color: #ff7900;
   background: #3a4856;
   padding: 6px 12px;
+}
+.navbar__li--block {
+  display: none;
 }
 
 .mainHeader {
@@ -228,6 +238,7 @@ svg {
   font-size: 4.5rem;
   text-align: center;
   margin: 60px auto;
+  width: 100%;
 }
 
 .form-refer {
@@ -413,6 +424,23 @@ svg {
   font-size: 4rem;
   text-align: center;
   margin: 18px auto 36px;
+}
+
+.table-estado {
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  border: 1px solid red;
+}
+.table-estado th {
+  border: 1px solid #ff7900;
+  background: #FFAD80;
+  font-size: 1.4rem;
+}
+.table-estado td {
+  text-align: center;
+  border: 1px solid #ff7900;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

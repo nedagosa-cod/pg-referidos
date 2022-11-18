@@ -135,12 +135,12 @@ label {
 }
 
 /* Reseteamos las tablas */
-// table,
-// tr,
-// td {
-//     border-collapse: collapse;
-//     border-spacing: 0;
-// }
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 /* Evitamos problemas con los SVG */
 svg {

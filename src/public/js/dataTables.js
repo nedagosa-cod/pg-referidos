@@ -1,3 +1,7 @@
+// export const prueba = (dato) => {
+//   alert(dato)
+// }
+
 
 // new gridjs.Grid({
   //   search: true,
