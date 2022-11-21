@@ -16,6 +16,9 @@ html {
 }
 
 body {
+  background-image: url("../img/call.jpg");
+  background-size: cover;
+  background-repeat: repeat;
   min-height: 100vh;
   font-size: 100%;
   font-family: "Nunito", sans-serif;
@@ -182,7 +185,7 @@ svg {
 .mainHeader {
   text-align: center;
   align-items: center;
-  width: 100%;
+  width: 50%;
   line-height: 11rem;
   font-size: 5rem;
   margin-top: 10rem;
@@ -216,29 +219,36 @@ svg {
 }
 
 .btn-referir {
-  width: 20%;
-  margin: 20px auto;
-  font-size: 3rem;
+  width: 30%;
+  margin: 5px auto;
+  font-size: 2rem;
+  font-weight: 700;
   padding: 16px 12px;
-  text-align: center;
   background: #ff7900;
-  border-radius: 24px;
-  -webkit-border-radius: 24px;
-  -moz-border-radius: 24px;
-  -ms-border-radius: 24px;
-  -o-border-radius: 24px;
+  line-height: 20px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.btn-referir:hover {
+  background: #FFAD80;
+  box-shadow: 2px 2px 5px #ff7900;
 }
 
 .main {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  overflow-x: auto;
 }
 .main__title {
   font-size: 4.5rem;
   text-align: center;
   margin: 60px auto;
   width: 100%;
+  color: #ff7900;
+  text-shadow: -2px 2px 2px #01426a;
 }
 
 .form-refer {
@@ -247,6 +257,7 @@ svg {
   overflow: auto;
   width: 70%;
   max-width: 960px;
+  background: #f8f9fa;
   margin: 20px auto;
   border: 3px groove #ff7900;
 }
@@ -414,6 +425,7 @@ svg {
   margin: auto;
   padding: 12px 18px;
   border: 3px groove #ff7900;
+  background: #f8f9fa;
   border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -428,6 +440,7 @@ svg {
 
 .table-estado {
   text-align: center;
+  background: #f8f9fa;
   margin: auto;
   width: 90%;
   border: 1px solid red;
@@ -441,6 +454,80 @@ svg {
   text-align: center;
   border: 1px solid #ff7900;
   font-size: 1.2rem;
+}
+
+/* From uiverse.io by @alexruix */
+.bx-search {
+  width: 80%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+}
+.bx-search__input {
+  width: 40%;
+  background: #f8f9fa;
+  text-align: center;
+  line-height: 28px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #ff7900;
+  padding: 0.2rem 0 0.2rem 4px;
+  outline: none;
+  color: #01426a;
+  transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.bx-search .input:focus, .bx-search input:hover {
+  outline: none;
+  padding: 0.2rem 1rem;
+}
+.bx-search .input::placeholder {
+  color: #f8f9fa;
+}
+.bx-search .input:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.bx-search__search {
+  width: 50px;
+  border-bottom: 2px solid #ff7900;
+  cursor: pointer;
+  font-size: 1.8rem;
+  background: #f8f9fa;
+}
+
+.over-table {
+  overflow-x: auto;
+  width: 95%;
+  margin: auto;
+  text-align: center;
+}
+.over-table__title {
+  font-size: 4.5rem;
+  margin: 60px auto;
+  width: 100%;
+  color: #ff7900;
+  text-shadow: -2px 2px 2px #01426a;
+}
+
+.table-loggin {
+  text-align: center;
+  background: #f8f9fa;
+  margin: 20px auto;
+  width: 150%;
+  border: 1px solid red;
+}
+.table-loggin th {
+  border: 1px solid #ff7900;
+  background: #FFAD80;
+  font-size: 1.3rem;
+}
+.table-loggin td {
+  text-align: center;
+  border: 1px solid #ff7900;
+  font-size: 1.1rem;
+}
+
+.table-employ {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

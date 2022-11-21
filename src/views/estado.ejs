@@ -15,7 +15,18 @@
     <%- include('partials/navBar.ejs') %>
     <main class="main">
         <h1 class="main__title">Verificación de estado de referido</h1>
-        <!-- <div id="table" class="tabla-estados"></div> -->
+        <form class="bx-search">
+            <input placeholder="Cédula empleado para buscar referido" type="text" class="bx-search__input" required="">
+            <button type="submit" class="bx-search__search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <table class="table-employ">
+            <tbody>
+                <tr>
+                    <td>NOMBRE EMPLEADO</td>
+                    <td>1095645215</td>
+                </tr>
+            </tbody>
+        </table>
         <table class="table-estado">
             <thead>
                 <th>ID</th>
@@ -30,9 +41,9 @@
                 <% resultado.forEach((datos) => { %>
                     <tr>
                         <td><%= datos.id %></td>
-                        <td><%= datos.fecha %></td>
+                        <td><%= new Date(datos.fecha).toLocaleDateString('es-ES') %></td>
                         <td><%= datos.nombre_r %></td>
-                        <td><%= datos.telefono_r %></td>
+                        <td><%= datos.telefono_r %> - <%= datos.telefono_rii %></td>
                         <td><%= datos.campana_r %></td>
                         <td><%= datos.sede_r %></td>
                         <td><%= datos.estado %></td>

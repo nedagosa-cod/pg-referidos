@@ -13,9 +13,46 @@
 </head>
 <body>
     <%- include('partials/navBar.ejs') %>
-    <main class="main">
-        <h1 class="main__title">Gestión de referidos</h1>
-        <div id="table" class="tabla-estados"></div>
+    <main class="over-table">
+        <h1 class="over-table__title">Gestión de referidos</h1>
+        <table class="table-loggin">
+            <thead>
+                <th>ID</th>
+                <th>Fecha Registro</th>
+                <th>Nombre empleado</th>
+                <th>C.C. Empleado</th>
+                <th>Tel. Empleado</th>
+                <th>Antiguedad Empleado</th>
+                <th>Campaña Empleado</th>
+                <th>Sede Empleado</th>
+                <th>Coordinador Empleado</th>
+                <th>Nombre Referido</th>
+                <th>Telefono Referido</th>
+                <th>Camapaña Interes</th>
+                <th>Sede Interes</th>
+                <th>Estado</th>
+            </thead>
+            <tbody>
+                <% resultado.forEach((datos) => { %>
+                    <tr>
+                        <td><%= datos.id %></td>
+                        <td><%= new Date(datos.fecha).toLocaleDateString('en-US') %></td>
+                        <td><%= datos.name_e %></td>
+                        <td><%= datos.documento_e %></td>
+                        <td><%= datos.telefono_e %></td>
+                        <td><%= datos.antiguedad_e %></td>
+                        <td><%= datos.campana_e %></td>
+                        <td><%= datos.sede_e %></td>
+                        <td><%= datos.coordinador_e %></td>
+                        <td><%= datos.nombre_r %></td>
+                        <td><%= datos.telefono_r %></td>
+                        <td><%= datos.campana_r %></td>
+                        <td><%= datos.sede_r %></td>
+                        <td><%= datos.estado %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
     </main>
 </body>
 </html>

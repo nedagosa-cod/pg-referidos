@@ -10,28 +10,28 @@
 <body>
     <%- include('partials/navBar.ejs') %>
     <main class="main">
-        <form action="/crud_crear" method="post" class="form-refer">
+        <form class="form-refer" action="/crud_crear" method="post">
 
             <section class="form-refer__section form-refer__section--left">
                 <h1>Datos de quien refiere</h1>
                 <div class="form__group field">
-                    <input required="" placeholder="Name" class="form__field" type="input" id="name_e" name="name_e">
+                    <input placeholder="Name" class="form__field" type="input" id="name_e" name="name_e" required>
                     <label class="form__label" for="name">Nombre completo</label>
                 </div>
                 <div class="form__group field">
-                    <input required="" placeholder="Name" class="form__field" type="input" id="documento_e" name="documento_e">
+                    <input placeholder="Name" class="form__field" type="input" id="documento_e" name="documento_e" required>
                     <label class="form__label" for="name">Número de documento</label>
                 </div>
                 <div class="form__group field">
-                    <input required="" placeholder="Name" class="form__field" type="input" id="telefono_e" name="telefono_e">
+                    <input placeholder="Name" class="form__field" type="input" id="telefono_e" name="telefono_e" required>
                     <label class="form__label" for="name">Número de teléfono</label>
                 </div>                
-                <select id="" class="form__select" id="antiguedad_e" name="antiguedad_e">
+                <select id="" class="form__select" id="antiguedad_e" name="antiguedad_e" required>
                     <option value="">Seleccionar Antiguedad</option>
                     <option value="Nuevo - En formación inicial">Nuevo - En formación inicial</option>
                     <option value="Antiguo - En operación">Antiguo - En operación</option>
                 </select>
-                <select id="" class="form__select" id="campaña_e" name="campaña_e">
+                <select id="" class="form__select" id="campana_e" name="campana_e" required>
                     <option value="">Campaña a la que perteneces</option>
                     <option value="Claro Colombia">Claro Colombia</option>
                     <option value="Telefonica Colombia">Telefonica Colombia</option>
@@ -40,7 +40,7 @@
                     <option value="Ventas Multisector">Ventas Multisector</option>
                     <option value="Servicio Multisector">Servicio Multisector</option>
                 </select>
-                <select name="antiguedad" id="" class="form__select" id="sede_e" name="sede_e">
+                <select name="antiguedad" id="" class="form__select" id="sede_e" name="sede_e" required>
                     <option value="">Sede Actual</option>
                     <option value="Bogotá Sede Royal">Bogotá Sede Royal</option>
                     <option value="Bogotá Sede Dorado">Bogotá Sede Dorado</option>
@@ -51,7 +51,7 @@
                     <option value="Pereira Olaya">Pereira Olaya</option>
                     <option value="Medellín Guayabal">Medellín Guayabal</option>
                 </select>
-                <select name="antiguedad" id="" class="form__select" id="cordi_e" name="cordi_e">
+                <select name="antiguedad" id="" class="form__select" id="cordi_e" name="cordi_e" required>
                     <option value="">Coordinador de formación a cargo</option>
                     <option value="GLADYS LILIANA HERRERA OLAYA">GLADYS LILIANA HERRERA OLAYA</option>
                     <option value="JHON JAIRO GIRALDO RODRIGUEZ">JHON JAIRO GIRALDO RODRIGL</option>
@@ -73,24 +73,28 @@
             <section class="form-refer__section">
                 <h1>Datos del referido</h1>
                 <div class="form__group field">
-                    <input required="" placeholder="Name" class="form__field" type="input" id="name_r" name="name_r">
+                    <input placeholder="Name" class="form__field" type="input" id="name_r" name="name_r" required>
                     <label class="form__label" for="name">Nombre completo</label>
                 </div>
                 <div class="form__group field">
-                    <input required="" placeholder="Name" class="form__field" type="input" id="telefono_r" name="telefono_r">
-                    <label class="form__label" for="name">Números de teléfono</label>
+                    <input placeholder="Name" class="form__field" type="input" id="telefono_r" name="telefono_r" required>
+                    <label class="form__label" for="name">Número de teléfono 1</label>
                 </div>
                 <div class="form__group field">
-                    <input required="" placeholder="Name" class="form__field" type="input" id="campaña_r" name="campaña_r">
+                    <input placeholder="Name" class="form__field" type="input" id="telefono_rii" name="telefono_rii">
+                    <label class="form__label" for="name">Número de teléfono 2</label>
+                </div>
+                <div class="form__group field">
+                    <input placeholder="Name" class="form__field" type="input" id="campaña_r" name="campaña_r">
                     <label class="form__label" for="name">Campaña de interés</label>
                 </div>
                 <div class="form__group field">
-                    <input required="" placeholder="Name" class="form__field" type="input" id="sede_r" name="sede_r">
+                    <input placeholder="Name" class="form__field" type="input" id="sede_r" name="sede_r">
                     <label class="form__label" for="name">Cual sedes se le facilita trasladarse</label>
                 </div>
                 <div class="form__group field" id="hv_r" name="hv_r">
                     <span>Si cuentas con la HV de la persona, adjunta el documento</span>
-                    <input type="file" class="form__group--file">
+                    <input type="file" class="form__group--file" id="hv_r" name="hv_r">
                 </div>
            
             </section>

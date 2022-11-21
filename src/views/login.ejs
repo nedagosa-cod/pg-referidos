@@ -10,17 +10,18 @@
 <body>
     <%- include('partials/navBar.ejs') %>
     <section class="bx-login">
-        <form class="form-login">
+        <form class="form-login" action="/&0@%&&" method="post">
             <h1>Bienvenido</h1>
             <div class="form__group field">
-                <input required="" placeholder="Name" class="form__field" type="input" name="user">
+                <input required="" placeholder="Name" class="form__field" type="input" name="user_loggin" id="user_loggin">
                 <label class="form__label" for="name">Usuario</label>
             </div>
             <div class="form__group field">
-                <input required="" placeholder="Name" class="form__field" type="password" name="password">
+                <input required="" placeholder="Name" class="form__field" type="password" name="pass_loggin" id="pass_loggin">
                 <label class="form__label" for="name">Contraseña</label>
             </div>
-            <a class="btn-send" dir="btnLoggin" href="/&0@%&&">Enviar</a>
+            <!-- <a class="btn-send" dir="btnLoggin" href="/&0@%&&">Enviar</a> -->
+            <button type="submit" id="btn_loggin" class="btn-send">Ingresar</button>
         </form>
     </section>
 </body>

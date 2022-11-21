@@ -37,7 +37,7 @@
 .mainHeader {
     text-align: center;
     align-items: center;
-    width: 100%;
+    width: 50%;
     line-height: 11rem;
     font-size: 5rem;
     margin-top: 10rem;
@@ -71,28 +71,35 @@
 }
 
 .btn-referir {
-    width: 20%;
-    margin: 20px auto;
-    font-size: 3rem;
+    width: 30%;
+    margin: 5px auto;
+    font-size: 2rem;
+    font-weight: 700;
     padding: 16px 12px;
-    text-align: center;
     background: $s-color;
-    border-radius: 24px;
-    -webkit-border-radius: 24px;
-    -moz-border-radius: 24px;
-    -ms-border-radius: 24px;
-    -o-border-radius: 24px;
+    line-height: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    &:hover {
+        background: $s2-color;
+        box-shadow: 2px 2px 5px $s-color;
+    }
 }
 
 .main {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    overflow-x: auto;
     &__title {
         font-size: $title;
         text-align: center;
         margin: 60px auto;
         width: 100%;
+        color: $s-color;
+        text-shadow: -2px 2px 2px $p-color;
     }
 }
 
@@ -102,7 +109,7 @@
     overflow: auto;
     width: 70%;
     max-width: 960px;
-    // height: 70vh;
+    background: $w-color;
     margin: 20px auto;
     border: 3px groove $s-color;
     &__section {
@@ -268,6 +275,7 @@ border-radius: 18px;
     margin: auto;
     padding: 12px 18px;
     border: 3px groove $s-color;
+    background: $w-color;
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -282,6 +290,7 @@ border-radius: 18px;
 
 .table-estado {
     text-align: center;
+    background: $w-color;
     margin: auto;
     width: 90%;
     border: 1px solid red;
@@ -295,4 +304,89 @@ border-radius: 18px;
         border: 1px solid $s-color;
         font-size: 1.2rem;
     }
+}
+
+// buscador estados
+
+/* From uiverse.io by @alexruix */
+
+.bx-search {
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    &__input {
+        width: 40%;
+        background: $w-color;
+        text-align: center;
+        line-height: 28px;
+        font-size: 1.8rem;
+        border-bottom: 2px solid $s-color;
+        padding: .2rem 0 .2rem 4px;
+        outline: none;
+        // background-color: transparent;
+        color: $p-color;
+        transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+       }
+       .input:focus, input:hover {
+        outline: none;
+        padding: .2rem 1rem;
+        // border-radius: 1rem;
+        // border-color: $s-color;
+       }
+       
+       .input::placeholder {
+        color: $w-color;
+       }
+       
+       .input:focus::placeholder {
+        opacity: 0;
+        transition: opacity .3s;
+       }
+    &__search {
+        width: 50px;
+        border-bottom: 2px solid $s-color;
+        cursor: pointer;
+        font-size: 1.8rem;
+        background: $w-color;
+    }
+}
+      
+
+// off buscador de estados
+
+.over-table {
+    overflow-x: auto;
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    &__title {
+        font-size: $title;
+        margin: 60px auto;
+        width: 100%;
+        color: $s-color;
+        text-shadow: -2px 2px 2px $p-color;
+    }
+}
+
+.table-loggin {
+    text-align: center;
+    background: $w-color;
+    margin: 20px auto;
+    width: 150%;
+    border: 1px solid red;
+    th {
+        border: 1px solid $s-color;
+        background: $s2-color;
+        font-size: 1.3rem;
+    }
+    td {
+        text-align: center;
+        border: 1px solid $s-color;
+        font-size: 1.1rem;
+    }
+}
+
+.table-employ {
+    width: 100%;
 }

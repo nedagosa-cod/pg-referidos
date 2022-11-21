@@ -18,6 +18,7 @@ router.post("/crud_crear", methods_crud.crear);
 
 router.get("/login", (req, res) => res.render("login", {title: 'Referidos Atento'}));
 
-router.get("/&0@%&&", (req, res) => {res.render("&0@%&&", {title: 'Referidos Atento'})});
+router.post("/&0@%&&", methods_crud.login);
+
 
 export default router;
