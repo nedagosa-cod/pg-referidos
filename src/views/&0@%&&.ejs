@@ -15,44 +15,54 @@
     <%- include('partials/navBar.ejs') %>
     <main class="over-table">
         <h1 class="over-table__title">Gestión de referidos</h1>
-        <table class="table-loggin">
-            <thead>
-                <th>ID</th>
-                <th>Fecha Registro</th>
-                <th>Nombre empleado</th>
-                <th>C.C. Empleado</th>
-                <th>Tel. Empleado</th>
-                <th>Antiguedad Empleado</th>
-                <th>Campaña Empleado</th>
-                <th>Sede Empleado</th>
-                <th>Coordinador Empleado</th>
-                <th>Nombre Referido</th>
-                <th>Telefono Referido</th>
-                <th>Camapaña Interes</th>
-                <th>Sede Interes</th>
-                <th>Estado</th>
-            </thead>
-            <tbody>
-                <% resultado.forEach((datos) => { %>
-                    <tr>
-                        <td><%= datos.id %></td>
-                        <td><%= new Date(datos.fecha).toLocaleDateString('en-US') %></td>
-                        <td><%= datos.name_e %></td>
-                        <td><%= datos.documento_e %></td>
-                        <td><%= datos.telefono_e %></td>
-                        <td><%= datos.antiguedad_e %></td>
-                        <td><%= datos.campana_e %></td>
-                        <td><%= datos.sede_e %></td>
-                        <td><%= datos.coordinador_e %></td>
-                        <td><%= datos.nombre_r %></td>
-                        <td><%= datos.telefono_r %></td>
-                        <td><%= datos.campana_r %></td>
-                        <td><%= datos.sede_r %></td>
-                        <td><%= datos.estado %></td>
-                    </tr>
-                <% }); %>
-            </tbody>
-        </table>
+        <form class="box-table" action="crud_actualizar" method="post">
+            <table class="table-loggin">
+                <thead>
+                    <th>ID</th>
+                    <th>Fecha Registro</th>
+                    <th>Nombre empleado</th>
+                    <th>C.C. Empleado</th>
+                    <th>Tel. Empleado</th>
+                    <th>Antiguedad Empleado</th>
+                    <th>Campaña Empleado</th>
+                    <th>Sede Empleado</th>
+                    <th>Coordinador Empleado</th>
+                    <th>Nombre Referido</th>
+                    <th>Telefono Referido</th>
+                    <th>Camapaña Interes</th>
+                    <th>Sede Interes</th>
+                    <th>Estado</th>
+                </thead>
+                <tbody>
+                    <% resultado.forEach((datos) => { %>
+                        <tr>
+                            <td><input type="text" name="delselect_id" id="delselect_id" value="<%= datos.id %>"></td>
+                            <td><input type="text" value="<%= new Date(datos.fecha).toLocaleDateString('en-US') %>"></td>
+                            <td><input type="text" id="name_e" name="name_e" value="<%= datos.name_e %>"></td>
+                            <td><input type="text" id="documento_e" name="documento_e" value="<%= datos.documento_e %>"></td>
+                            <td><input type="text" id="telefono_e" name="telefono_e" value="<%= datos.telefono_e %>"></td>
+                            <td><input type="text" id="antiguedad_e" name="antiguedad_e" value="<%= datos.antiguedad_e %>"></td>
+                            <td><input type="text" id="campana_e" name="campana_e" value="<%= datos.campana_e %>"></td>
+                            <td><input type="text" id="sede_e" name="sede_e" value="<%= datos.sede_e %>"></td>
+                            <td><input type="text" id="coordinador_e" name="coordinador_e" value="<%= datos.coordinador_e %>"></td>
+                            <td><input type="text" id="nombre_r" name="nombre_r" value="<%= datos.nombre_r %>"></td>
+                            <td><input type="text" id="telefono_r" name="telefono_r" value="<%= datos.telefono_r %>"></td>
+                            <td><input type="text" id="campana_r" name="campana_r" value="<%= datos.campana_r %>"></td>
+                            <td><input type="text" id="sede_r" name="sede_r" value="<%= datos.sede_r %>"></td>
+                            <td>
+                                <select name="estado" id="estado">
+                                    <option value="<%= datos.estado %>"><%= datos.estado %></option>
+                                    <option value="Contratado">Contratado</option>
+                                    <option value="En proceso">En proceso</option>
+                                    <option value="No contactado">No contactado</option>
+                                </select>
+                            </td>
+                            <td><button type="submit">Actualizar</button></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </form>
     </main>
 </body>
 </html>

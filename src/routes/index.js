@@ -15,10 +15,12 @@ router.get("/referir", (req, res) => res.render("referir", {title: 'Referidos At
 
 router.get("/estado", methods_crud.leer);
 router.post("/crud_crear", methods_crud.crear);
+router.post("/crud_buscar", methods_crud.buscar);
 
 router.get("/login", (req, res) => res.render("login", {title: 'Referidos Atento'}));
 
 router.post("/&0@%&&", methods_crud.login);
+router.post("/crud_actualizar", methods_crud.actualizar)
 
 
 export default router;

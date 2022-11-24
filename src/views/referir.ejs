@@ -26,12 +26,12 @@
                     <input placeholder="Name" class="form__field" type="input" id="telefono_e" name="telefono_e" required>
                     <label class="form__label" for="name">Número de teléfono</label>
                 </div>                
-                <select id="" class="form__select" id="antiguedad_e" name="antiguedad_e" required>
+                <select class="form__select" id="antiguedad_e" name="antiguedad_e" required>
                     <option value="">Seleccionar Antiguedad</option>
                     <option value="Nuevo - En formación inicial">Nuevo - En formación inicial</option>
                     <option value="Antiguo - En operación">Antiguo - En operación</option>
                 </select>
-                <select id="" class="form__select" id="campana_e" name="campana_e" required>
+                <select class="form__select" id="campana_e" name="campana_e" required>
                     <option value="">Campaña a la que perteneces</option>
                     <option value="Claro Colombia">Claro Colombia</option>
                     <option value="Telefonica Colombia">Telefonica Colombia</option>
@@ -40,7 +40,7 @@
                     <option value="Ventas Multisector">Ventas Multisector</option>
                     <option value="Servicio Multisector">Servicio Multisector</option>
                 </select>
-                <select name="antiguedad" id="" class="form__select" id="sede_e" name="sede_e" required>
+                <select class="form__select" id="sede_e" name="sede_e" required>
                     <option value="">Sede Actual</option>
                     <option value="Bogotá Sede Royal">Bogotá Sede Royal</option>
                     <option value="Bogotá Sede Dorado">Bogotá Sede Dorado</option>
@@ -51,7 +51,7 @@
                     <option value="Pereira Olaya">Pereira Olaya</option>
                     <option value="Medellín Guayabal">Medellín Guayabal</option>
                 </select>
-                <select name="antiguedad" id="" class="form__select" id="cordi_e" name="cordi_e" required>
+                <select class="form__select" id="cordi_e" name="cordi_e" required>
                     <option value="">Coordinador de formación a cargo</option>
                     <option value="GLADYS LILIANA HERRERA OLAYA">GLADYS LILIANA HERRERA OLAYA</option>
                     <option value="JHON JAIRO GIRALDO RODRIGUEZ">JHON JAIRO GIRALDO RODRIGL</option>
@@ -84,14 +84,26 @@
                     <input placeholder="Name" class="form__field" type="input" id="telefono_rii" name="telefono_rii">
                     <label class="form__label" for="name">Número de teléfono 2</label>
                 </div>
-                <div class="form__group field">
-                    <input placeholder="Name" class="form__field" type="input" id="campaña_r" name="campaña_r">
-                    <label class="form__label" for="name">Campaña de interés</label>
-                </div>
-                <div class="form__group field">
-                    <input placeholder="Name" class="form__field" type="input" id="sede_r" name="sede_r">
-                    <label class="form__label" for="name">Cual sedes se le facilita trasladarse</label>
-                </div>
+                <select class="form__select" id="campana_r" name="campaña_r" required>
+                    <option value="">Campaña de interés</option>
+                    <option value="Claro Colombia">Claro Colombia</option>
+                    <option value="Telefonica Colombia">Telefonica Colombia</option>
+                    <option value="Telefónica Ventas">Telefónica Ventas</option>
+                    <option value="Telefónica Chile">Telefónica Chile</option>
+                    <option value="Ventas Multisector">Ventas Multisector</option>
+                    <option value="Servicio Multisector">Servicio Multisector</option>
+                </select>
+                <select class="form__select" id="sede_r" name="sede_r" required>
+                    <option value="">Sede que se le facilita trasladarse</option>
+                    <option value="Bogotá Sede Royal">Bogotá Sede Royal</option>
+                    <option value="Bogotá Sede Dorado">Bogotá Sede Dorado</option>
+                    <option value="Bogotá Sede Telares">Bogotá Sede Telares</option>
+                    <option value="Bogotá Sede Floresta">Bogotá Sede Floresta</option>
+                    <option value="Bogotá Sede Elemento">Bogotá Sede Elemento</option>
+                    <option value="Pereira Tres nevados">Pereira Tres nevados</option>
+                    <option value="Pereira Olaya">Pereira Olaya</option>
+                    <option value="Medellín Guayabal">Medellín Guayabal</option>
+                </select>
                 <div class="form__group field" id="hv_r" name="hv_r">
                     <span>Si cuentas con la HV de la persona, adjunta el documento</span>
                     <input type="file" class="form__group--file" id="hv_r" name="hv_r">

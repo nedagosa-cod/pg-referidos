@@ -7,11 +7,10 @@ methods_crud.leer = (req, res) => {
 
     conn.query('SELECT * from users', (err, result) => {
         if (err) {throw err} else {
-            res.render("estado", {resultado: result, title: 'Referidos'})
+            res.render("estado", {resultado: result, title: 'Referidos', search: false})
         }
     })
 }
-
 
 methods_crud.crear = (req, res) => {
     const btn_crear = req.body.btn_crear;
@@ -57,6 +56,48 @@ methods_crud.login = (req, res) => {
         
         res.redirect('/login')
     }
+}
+
+methods_crud.buscar = (req, res) => {
+    const searchCedula = req.body.searchCedula
+
+    conn.query('SELECT * from users', (err, result) => {
+        if (err) {console.log(err)} else {
+            res.render("estado", {filas: result, searchCedula: searchCedula ,title: 'Referidos', search: true}) 
+        }
+    })
+}
+
+methods_crud.actualizar = (req, res) => {
+    const nombre_r = req.body.nombre_r;
+    const telefono_r = req.body.telefono_r;
+    const telefono_rii = req.body.telefono_rii;
+    const campana_r = req.body.campana_r;
+    const sede_r = req.body.sede_r;
+    const name_e = req.body.name_e;
+    const documento_e = req.body.documento_e;
+    const telefono_e = req.body.telefono_e;
+    const antiguedad_e = req.body.antiguedad_e;
+    const campana_e = req.body.campana_e;
+    const sede_e = req.body.sede_e;
+    const coordinador_e = req.body.coordinador_e;
+
+    const select_id = req.body.estado
+    const delselect_id = req.body.delselect_id
+
+    let createSql = 
+    `UPDATE users estado ? where id = ?`
+    
+    const fechaa = new Date()
+
+    conn.query(createSql, [{ estado:select_id}, delselect_id], //// hacer que select id no se lean todos al tiempo
+        (err, result) => {
+        if (err) {
+            console.log(err)
+        } else {
+            res.redirect('/referir')
+        }
+    })
 }
 export {methods_crud}
 

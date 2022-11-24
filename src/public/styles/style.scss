@@ -92,7 +92,6 @@
 .main {
     display: flex;
     flex-wrap: wrap;
-    overflow-x: auto;
     &__title {
         font-size: $title;
         text-align: center;
@@ -291,7 +290,7 @@ border-radius: 18px;
 .table-estado {
     text-align: center;
     background: $w-color;
-    margin: auto;
+    margin: 22px auto;
     width: 90%;
     border: 1px solid red;
     th {
@@ -312,7 +311,7 @@ border-radius: 18px;
 
 .bx-search {
     width: 80%;
-    margin: 30px auto;
+    margin: 30px auto 0 auto;
     display: flex;
     justify-content: center;
     &__input {
@@ -356,7 +355,6 @@ border-radius: 18px;
 // off buscador de estados
 
 .over-table {
-    overflow-x: auto;
     width: 95%;
     margin: auto;
     text-align: center;
@@ -375,6 +373,7 @@ border-radius: 18px;
     margin: 20px auto;
     width: 150%;
     border: 1px solid red;
+    overflow-x: auto;
     th {
         border: 1px solid $s-color;
         background: $s2-color;
@@ -386,7 +385,17 @@ border-radius: 18px;
         font-size: 1.1rem;
     }
 }
-
-.table-employ {
+.box-table {
     width: 100%;
+    overflow-x: auto;
+}
+.table-employ {
+    margin: 0 auto 20px auto;
+    max-width: 667px;
+    width: 35.6%;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: $w-color;
+    line-height: 3.5rem;
 }

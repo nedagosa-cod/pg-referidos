@@ -15,15 +15,17 @@
     <%- include('partials/navBar.ejs') %>
     <main class="main">
         <h1 class="main__title">Verificación de estado de referido</h1>
-        <form class="bx-search">
-            <input placeholder="Cédula empleado para buscar referido" type="text" class="bx-search__input" required="">
+        <form class="bx-search" action="/crud_buscar" method="post">
+            <input placeholder="Cédula empleado para buscar referido" type="text" class="bx-search__input" id="searchCedula" name="searchCedula" required="">
             <button type="submit" class="bx-search__search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
         <table class="table-employ">
             <tbody>
                 <tr>
-                    <td>NOMBRE EMPLEADO</td>
-                    <td>1095645215</td>
+                    <% if (search) { %>
+                        <td><%= filas[0].name_e %></td>
+                        <td><%= filas[0].documento_e %></td>
+                    <% } %>                    
                 </tr>
             </tbody>
         </table>
