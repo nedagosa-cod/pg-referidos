@@ -78,8 +78,25 @@ methods_crud.editar = (req, res) => {
         if (err) {
             console.log(err)
         } else {
-            console.log(result[0])
             res.render("e&1t4r", {user: result[0], title: 'Referidos'})
+        }
+    })
+}
+
+methods_crud.actualizar = (req, res) => {
+    
+    const id = req.body.id_editar
+    const estado = req.body.estado
+    
+    const sqlUptade = `UPDATE users SET estado = '${estado}' WHERE id = ${id}`
+
+    conn.query(sqlUptade,
+        (err, result) => {
+        if (err) {
+            console.log(err)
+        } else {
+            console.log(estado)
+            res.redirect('/login')
         }
     })
 }

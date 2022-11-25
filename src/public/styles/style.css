@@ -240,6 +240,7 @@ svg {
 .main {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .main__title {
   font-size: 4.5rem;
@@ -273,6 +274,30 @@ svg {
 }
 .form-refer__section h1 {
   margin: 18px 0 32px 0;
+}
+.form-refer__edit {
+  width: 100%;
+  text-align: center;
+  margin: 8px 0;
+}
+.form-refer__edit--estado {
+  width: 80%;
+  margin: 12px 0;
+  border: 2px solid #ff7900;
+}
+.form-refer__cancel {
+  display: block;
+  margin: 18px auto;
+  color: #f8f9fa;
+  font-size: 1.6rem;
+  padding: 10px 30px;
+  background: red;
+  cursor: pointer;
+  border-radius: 18px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
 }
 
 .form__group {

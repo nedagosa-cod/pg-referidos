@@ -14,31 +14,36 @@
         <form class="form-refer" action="/crud_actualizar" method="post">
             <section class="form-refer__section form-refer__section--left">
                 <h1>Datos de quien refiere</h1>
-                <input type="text" value="<%= user.name_e %>" >                                
-                <input type="text" value="<%= user.documento_e %>" >                                
-                <input type="text" value="<%= user.telefono_e %>" >                                
-                <input type="text" value="<%= user.antiguedad_e %>" >                                
-                <input type="text" value="<%= user.campana_e %>" >                                
-                <input type="text" value="<%= user.sede_e %>" >                                
-                <input type="text" value="<%= user.coordinador_e %>" >                                
+                <input id="id_editar" name="id_editar" type="text" value="<%= user.id %>" hidden>
+                <input id="name_e" name="name_e" class="form-refer__edit" type="text" value="<%= user.name_e %>">                                
+                <input id="documento_e" name="documento_e" class="form-refer__edit" type="text" value="<%= user.documento_e %>">                                
+                <input id="telefono_e" name="telefono_e" class="form-refer__edit" type="text" value="<%= user.telefono_e %>">                                
+                <input id="antiguedad_e" name="antiguedad_e" class="form-refer__edit" type="text" value="<%= user.antiguedad_e %>">                                
+                <input id="campana_e" name="campana_e" class="form-refer__edit" type="text" value="<%= user.campana_e %>">                                
+                <input id="sede_e" name="sede_e" class="form-refer__edit" type="text" value="<%= user.sede_e %>">                                
+                <input id="cordi_e" name="cordi_e" class="form-refer__edit" type="text" value="<%= user.coordinador_e %>">                                
             </section>
             
             <section class="form-refer__section">
                 <h1>Datos del referido</h1>
-                <input type="text" value="<%= user.name_r %>" >                                
-                <input type="text" value="<%= user.telefono_r %>" >                                
-                <input type="text" value="<%= user.telefono_rii %>" >                                
-                <input type="text" value="<%= user.campana_r %>" >                                
-                <input type="text" value="<%= user.sede_r %>" >
-                <select name="" id="">
-                    <option value="<%= user.estado %>"><%= user.estado %></option>
-                    <option value="Contratado">Contratado</option>
-                    <option value="En formación">En formación</option>
-                    <option value="En proceso">En proceso</option>
-                    <option value="No contactado">No contactado</option>
+                <input id="name_r" name="name_r" class="form-refer__edit" type="text" value="<%= user.nombre_r %>">                                
+                <input id="telefono_r" name="telefono_r" class="form-refer__edit" type="text" value="<%= user.telefono_r %>">                                
+                <input id="telefono_rii" name="telefono_rii" class="form-refer__edit" type="text" value="<%= user.telefono_rii %>">                                
+                <input id="campana_r" name="campana_r" class="form-refer__edit" type="text" value="<%= user.campana_r %>">                                
+                <input id="sede_r" name="sede_r" class="form-refer__edit" type="text" value="<%= user.sede_r %>">
+                <select name="estado" id="estado" class="form-refer__edit--estado">
+                    <option <%= user.estado == "Pendiente" ? "selected" : "" %> value="Pendiente">Pendiente</option>
+                    <option <%= user.estado == "Agendado" ? "selected" : "" %> value="Agendado">Agendado</option>
+                    <option <%= user.estado == "No contactado" ? "selected" : "" %> value="No contactado">No contactado</option>
+                    <option <%= user.estado == "Contratado" ? "selected" : "" %> value="Contratado">Contratado</option>
+                    <option <%= user.estado == "En formación" ? "selected" : "" %> value="En formación">En formación</option>
+                    <option <%= user.estado == "En Evaluación" ? "selected" : "" %> value="En Evaluación">En Evaluación</option>
+                    <option <%= user.estado == "No interesado" ? "selected" : "" %> value="No interesado">No interesado</option>
+                    <option <%= user.estado == "No aprobado" ? "selected" : "" %> value="No aprobado">No aprobado</option>
                 </select>                             
             </section>
-            <button type="submit" class="btn-send" id="btn_crear" name="btn_crear">Enviar</button>
+            <a class="form-refer__cancel" href="/&0@%&&">Cancelar</a>
+            <button type="submit" class="btn-send" id="btn_actualizar" name="btn_actualizar">Actualizar Estado</button>
         </form>
         <% } %>
     </main>

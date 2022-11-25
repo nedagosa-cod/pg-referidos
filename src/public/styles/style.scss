@@ -92,6 +92,7 @@
 .main {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     &__title {
         font-size: $title;
         text-align: center;
@@ -124,6 +125,30 @@
         h1 {
             margin: 18px 0 32px 0;
         }
+    }
+    &__edit {
+        width: 100%;
+        text-align: center;
+        margin: 8px 0;
+        &--estado {
+            width: 80%;
+            margin: 12px 0;
+            border: 2px solid $s-color;
+        }
+    }
+    &__cancel {
+        display: block;
+        margin: 18px auto;
+        color: $w-color;
+        font-size: 1.6rem;
+        padding: 10px 30px;
+        background: red;
+        cursor: pointer;
+        border-radius: 18px;
+        -webkit-border-radius: 18px;
+        -moz-border-radius: 18px;
+        -ms-border-radius: 18px;
+        -o-border-radius: 18px;
     }
 }
 

@@ -49,15 +49,8 @@
                             <td><input type="text" id="telefono_r" name="telefono_r" value="<%= datos.telefono_r %>"></td>
                             <td><input type="text" id="campana_r" name="campana_r" value="<%= datos.campana_r %>"></td>
                             <td><input type="text" id="sede_r" name="sede_r" value="<%= datos.sede_r %>"></td>
-                            <td>
-                                <select name="estado" id="estado<%= datos.id %>">
-                                    <option value="<%= datos.estado %>"><%= datos.estado %></option>
-                                    <option value="Contratado">Contratado</option>
-                                    <option value="En proceso">En proceso</option>
-                                    <option value="No contactado">No contactado</option>
-                                </select>
-                            </td>
-                            <td><a href="/crud_editar/<%= datos.id %>">Actualizar</a></td>
+                            <td><input type="text" id="estado" name="estado" value="<%= datos.estado %>"></td>
+                            <td><a href="/crud_editar/<%= datos.id %>">Editar</a></td>
                         </tr>
                     <% }); %>
                 </tbody>
