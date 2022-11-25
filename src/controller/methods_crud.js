@@ -53,7 +53,6 @@ methods_crud.login = (req, res) => {
             }
         })
     } else {
-        
         res.redirect('/login')
     }
 }
@@ -68,34 +67,19 @@ methods_crud.buscar = (req, res) => {
     })
 }
 
-methods_crud.actualizar = (req, res) => {
-    const nombre_r = req.body.nombre_r;
-    const telefono_r = req.body.telefono_r;
-    const telefono_rii = req.body.telefono_rii;
-    const campana_r = req.body.campana_r;
-    const sede_r = req.body.sede_r;
-    const name_e = req.body.name_e;
-    const documento_e = req.body.documento_e;
-    const telefono_e = req.body.telefono_e;
-    const antiguedad_e = req.body.antiguedad_e;
-    const campana_e = req.body.campana_e;
-    const sede_e = req.body.sede_e;
-    const coordinador_e = req.body.coordinador_e;
+methods_crud.editar = (req, res) => {
 
-    const select_id = req.body.estado
-    const delselect_id = req.body.delselect_id
+    const id = req.params.id
 
-    let createSql = 
-    `UPDATE users estado ? where id = ?`
+    const sqlSelect = `SELECT * FROM users WHERE id = ${id}`
+    // const sqlUptade = "UPDATE `railway`.`users` SET `estado` =" + ` '${name}' WHERE (id = '${id}')`
     
-    const fechaa = new Date()
-
-    conn.query(createSql, [{ estado:select_id}, delselect_id], //// hacer que select id no se lean todos al tiempo
-        (err, result) => {
+    conn.query(sqlSelect, (err, result) => {
         if (err) {
             console.log(err)
         } else {
-            res.redirect('/referir')
+            console.log(result[0])
+            res.render("e&1t4r", {user: result[0], title: 'Referidos'})
         }
     })
 }

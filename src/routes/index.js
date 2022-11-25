@@ -20,7 +20,8 @@ router.post("/crud_buscar", methods_crud.buscar);
 router.get("/login", (req, res) => res.render("login", {title: 'Referidos Atento'}));
 
 router.post("/&0@%&&", methods_crud.login);
-router.post("/crud_actualizar", methods_crud.actualizar)
+// router.post("/crud_actualizar", methods_crud.actualizar)
+router.get("/crud_editar/:id", methods_crud.editar)
 
 
 export default router;

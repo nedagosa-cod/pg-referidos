@@ -50,14 +50,14 @@
                             <td><input type="text" id="campana_r" name="campana_r" value="<%= datos.campana_r %>"></td>
                             <td><input type="text" id="sede_r" name="sede_r" value="<%= datos.sede_r %>"></td>
                             <td>
-                                <select name="estado" id="estado">
+                                <select name="estado" id="estado<%= datos.id %>">
                                     <option value="<%= datos.estado %>"><%= datos.estado %></option>
                                     <option value="Contratado">Contratado</option>
                                     <option value="En proceso">En proceso</option>
                                     <option value="No contactado">No contactado</option>
                                 </select>
                             </td>
-                            <td><button type="submit">Actualizar</button></td>
+                            <td><a href="/crud_editar/<%= datos.id %>">Actualizar</a></td>
                         </tr>
                     <% }); %>
                 </tbody>

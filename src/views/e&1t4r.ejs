@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head.ejs') %> 
+    <title><%= title%></title>
+</head>
+<body>
+    <%- include('partials/navBar.ejs') %>
+    <main class="main">
+        <% if (user) { %>
+        <form class="form-refer" action="/crud_actualizar" method="post">
+            <section class="form-refer__section form-refer__section--left">
+                <h1>Datos de quien refiere</h1>
+                <input type="text" value="<%= user.name_e %>" >                                
+                <input type="text" value="<%= user.documento_e %>" >                                
+                <input type="text" value="<%= user.telefono_e %>" >                                
+                <input type="text" value="<%= user.antiguedad_e %>" >                                
+                <input type="text" value="<%= user.campana_e %>" >                                
+                <input type="text" value="<%= user.sede_e %>" >                                
+                <input type="text" value="<%= user.coordinador_e %>" >                                
+            </section>
+            
+            <section class="form-refer__section">
+                <h1>Datos del referido</h1>
+                <input type="text" value="<%= user.name_r %>" >                                
+                <input type="text" value="<%= user.telefono_r %>" >                                
+                <input type="text" value="<%= user.telefono_rii %>" >                                
+                <input type="text" value="<%= user.campana_r %>" >                                
+                <input type="text" value="<%= user.sede_r %>" >
+                <select name="" id="">
+                    <option value="<%= user.estado %>"><%= user.estado %></option>
+                    <option value="Contratado">Contratado</option>
+                    <option value="En formación">En formación</option>
+                    <option value="En proceso">En proceso</option>
+                    <option value="No contactado">No contactado</option>
+                </select>                             
+            </section>
+            <button type="submit" class="btn-send" id="btn_crear" name="btn_crear">Enviar</button>
+        </form>
+        <% } %>
+    </main>
+</body>
+</html>
