@@ -50,23 +50,6 @@
                     <option value="Pereira Tres nevados">Pereira Tres nevados</option>
                     <option value="Pereira Olaya">Pereira Olaya</option>
                     <option value="Medellín Guayabal">Medellín Guayabal</option>
-                </select>
-                <select class="form__select" id="cordi_e" name="cordi_e" required>
-                    <option value="">Coordinador de formación a cargo</option>
-                    <option value="GLADYS LILIANA HERRERA OLAYA">GLADYS LILIANA HERRERA OLAYA</option>
-                    <option value="JHON JAIRO GIRALDO RODRIGUEZ">JHON JAIRO GIRALDO RODRIGL</option>
-                    <option value="YENNY LORENA MESA DELGADO">YENNY LORENA MESA DELGADO</option>
-                    <option value="YULIETH PAOLA NIETO RODRIGUEZ">YULIETH PAOLA NIETO RODRIGUEZ</option>
-                    <option value="RICARDO SILVA RODRIGUEZ">RICARDO SILVA RODRIGUEZ</option>
-                    <option value="JHONNY ALEXANDER VARELA RUSINQUE">JHONNY ALEXANDER VARELA RUSINQUE</option>
-                    <option value="SANDRA MILENA PAEZ PATINO">SANDRA MILENA PAEZ PATINO</option>
-                    <option value="CRISTIAN ANDRES TORRES PALACIO">CRISTIAN ANDRES TORRES PALACIO</option>
-                    <option value="BLEYDY ANDREA HERNANDEZ ROJAS">BLEYDY ANDREA HERNANDEZ ROJAS</option>
-                    <option value="BLEYDY ANDREA HERNANDEZ ROJAS">BLEYDY ANDREA HERNANDEZ ROJAS</option>
-                    <option value="BRAYAM STEVEN ORTIZ MERCHAN">BRAYAM STEVEN ORTIZ MERCHAN</option>
-                    <option value="CRISTIAN ANDRES VEGA MENDIVELSO">CRISTIAN ANDRES VEGA MENDIVELSO</option>
-                    <option value="JULIAN MANUEL MARTINEZ">JULIAN MANUEL MARTINEZ</option>
-                    <option value="JUAN SEBASTIAN VASQUEZ SANCHEZ">JUAN SEBASTIAN VASQUEZ SANCHEZ</option>
                 </select>                                
             </section>
 
@@ -84,26 +67,60 @@
                     <input placeholder="Name" class="form__field" type="input" id="telefono_rii" name="telefono_rii">
                     <label class="form__label" for="name">Número de teléfono 2</label>
                 </div>
-                <select class="form__select" id="campana_r" name="campaña_r" required>
-                    <option value="">Campaña de interés</option>
-                    <option value="Claro Colombia">Claro Colombia</option>
-                    <option value="Telefonica Colombia">Telefonica Colombia</option>
-                    <option value="Telefónica Ventas">Telefónica Ventas</option>
-                    <option value="Telefónica Chile">Telefónica Chile</option>
-                    <option value="Ventas Multisector">Ventas Multisector</option>
-                    <option value="Servicio Multisector">Servicio Multisector</option>
-                </select>
-                <select class="form__select" id="sede_r" name="sede_r" required>
-                    <option value="">Sede que se le facilita trasladarse</option>
-                    <option value="Bogotá Sede Royal">Bogotá Sede Royal</option>
-                    <option value="Bogotá Sede Dorado">Bogotá Sede Dorado</option>
-                    <option value="Bogotá Sede Telares">Bogotá Sede Telares</option>
-                    <option value="Bogotá Sede Floresta">Bogotá Sede Floresta</option>
-                    <option value="Bogotá Sede Elemento">Bogotá Sede Elemento</option>
-                    <option value="Pereira Tres nevados">Pereira Tres nevados</option>
-                    <option value="Pereira Olaya">Pereira Olaya</option>
-                    <option value="Medellín Guayabal">Medellín Guayabal</option>
-                </select>
+                <div class="field form-refer__checkboxs">
+                    <span>Tipos de ofertas / Campañas de interes</span>
+                    <label for="campana_r_1">
+                        Campañas Comerciales - Ventas
+                        <input type="checkbox" name="campana_r_1" id="campana_r_1" value="Campañas Comerciales - Ventas ">
+                    </label>
+                    <label for="campana_r_2">
+                        Campañas Servicio al cliente
+                        <input type="checkbox" name="campana_r_2" id="campana_r_2" value="Campañas Servicio al cliente ">
+                    </label>
+                    <label for="campana_r_3">
+                        Campañas Soporte técnico
+                        <input type="checkbox" name="campana_r_3" id="campana_r_3" value="Campañas Soporte técnico ">
+                    </label>
+                    <label for="campana_r_4">
+                        Campañas Chat
+                        <input type="checkbox" name="campana_r_4" id="campana_r_4" value="Campañas Chat ">
+                    </label>
+                    <label for="campana_r_5">
+                        Campañas Backoffice
+                        <input type="checkbox" name="campana_r_5" id="campana_r_5" value="Campañas Backoffice ">
+                    </label>
+                </div>
+                <div class="field form-refer__checkboxs">
+                    <span>Sedes que se le facilitaria trasladarse</span>
+                    <label for="sede_r_1">
+                        Bogotá Sede Royal - Calle 67 #12-35
+                        <input type="checkbox" name="sede_r_1" id="sede_r_1" value="Bogotá Sede Royal - Calle 67 #12-35 ">
+                    </label>
+                    <label for="sede_r_2">
+                        Bogotá Sede Telares - Carrera 54 # 5C-66
+                        <input type="checkbox" name="sede_r_2" id="sede_r_2" value="Bogotá Sede Telares - Carrera 54 # 5C-66 ">
+                    </label>
+                    <label for="sede_r_3">
+                        Bogotá Sede Dorado - Av. Dorado # 85D-55 - Local 150C
+                        <input type="checkbox" name="sede_r_3" id="sede_r_3" value="Bogotá Sede Dorado - Av. Dorado # 85D-55 - Local 150C ">
+                    </label>
+                    <label for="sede_r_4">
+                        Bogotá Sede Floresta - Carrera 69 # 98A-11- CC Floresta Outlets
+                        <input type="checkbox" name="sede_r_4" id="sede_r_4" value="Bogotá Sede Floresta - Carrera 69 # 98A-11- CC Floresta Outlets ">
+                    </label>
+                    <label for="sede_r_5">
+                        Pereira Sede Tres Nevados - Carrera 4 # 21–66
+                        <input type="checkbox" name="sede_r_5" id="sede_r_5" value="Pereira Sede Tres Nevados - Carrera 4 # 21–66 ">
+                    </label>
+                    <label for="sede_r_5">
+                        Pereira Sede Olaya - Calle 22 #12-33
+                        <input type="checkbox" name="sede_r_6" id="sede_r_6" value="Pereira Sede Olaya - Calle 22 #12-33 ">
+                    </label>
+                    <label for="sede_r_7">
+                        Medellín Sede Guayabal - Calle 10 sur #51A-55,  Centro de Negocios del Sur
+                        <input type="checkbox" name="sede_r_7" id="sede_r_7" value="Medellín Sede Guayabal - Calle 10 sur #51A-55,  Centro de Negocios del Sur ">
+                    </label>                                        
+                </div>
                 <!-- <div class="form__group field" id="hv_r" name="hv_r">
                     <span>Si cuentas con la HV de la persona, adjunta el documento</span>
                     <input type="file" class="form__group--file" id="hv_r" name="hv_r">

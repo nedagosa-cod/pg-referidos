@@ -255,8 +255,8 @@ svg {
   display: flex;
   flex-wrap: wrap;
   overflow: auto;
-  width: 70%;
-  max-width: 960px;
+  width: 85%;
+  max-width: 1040px;
   background: #f8f9fa;
   margin: 20px auto;
   border: 3px groove #ff7900;
@@ -298,6 +298,24 @@ svg {
   -moz-border-radius: 18px;
   -ms-border-radius: 18px;
   -o-border-radius: 18px;
+}
+.form-refer__checkboxs {
+  width: 95%;
+  margin: 24px auto 4px auto;
+  border: 2px solid #adb5bd;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 6px;
+}
+.form-refer__checkboxs label {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.form-refer__checkboxs span {
+  margin: 6px auto;
+  color: #ff7900;
+  font-weight: 600;
 }
 
 .form__group {

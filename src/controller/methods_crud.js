@@ -13,25 +13,35 @@ methods_crud.leer = (req, res) => {
 }
 
 methods_crud.crear = (req, res) => {
-    const btn_crear = req.body.btn_crear;
-    const nombre_r = req.body.name_r;
-    const telefono_r = req.body.telefono_r;
-    const telefono_rii = req.body.telefono_rii;
-    const campana_r = req.body.campaña_r;
-    const sede_r = req.body.sede_r;
+
     const name_e = req.body.name_e;
     const documento_e = req.body.documento_e;
     const telefono_e = req.body.telefono_e;
     const antiguedad_e = req.body.antiguedad_e;
     const campana_e = req.body.campana_e;
     const sede_e = req.body.sede_e;
-    const coordinador_e = req.body.cordi_e;
-    // const hv_r = req.body.hv_r;
+    const nombre_r = req.body.name_r;
+    const telefono_r = req.body.telefono_r;
+    const telefono_rii = req.body.telefono_rii != undefined ? req.body.telefono_rii : '';
+
+    const campana_r_1 = req.body.campana_r_1 != undefined ? req.body.campana_r_1 : '';
+    const campana_r_2 = req.body.campana_r_2 != undefined ? req.body.campana_r_2 : '';
+    const campana_r_3 = req.body.campana_r_3 != undefined ? req.body.campana_r_3 : '';
+    const campana_r_4 = req.body.campana_r_4 != undefined ? req.body.campana_r_4 : '';
+    const campana_r_5 = req.body.campana_r_5 != undefined ? req.body.campana_r_5 : '';
+
+    const sede_r_1 = req.body.sede_r_1 != undefined ? req.body.sede_r_1 : '';
+    const sede_r_2 = req.body.sede_r_2 != undefined ? req.body.sede_r_2 : '';
+    const sede_r_3 = req.body.sede_r_3 != undefined ? req.body.sede_r_3 : '';
+    const sede_r_4 = req.body.sede_r_4 != undefined ? req.body.sede_r_4 : '';
+    const sede_r_5 = req.body.sede_r_5 != undefined ? req.body.sede_r_5 : '';
+    const sede_r_6 = req.body.sede_r_6 != undefined ? req.body.sede_r_6 : '';
+    const sede_r_7 = req.body.sede_r_7 != undefined ? req.body.sede_r_7 : '';
 
     let createSql = 
-    "INSERT INTO users (name_e, documento_e, telefono_e, antiguedad_e, campana_e, sede_e, coordinador_e, nombre_r, telefono_r, telefono_rii, campana_r, sede_r, estado, fecha)" +
+    "INSERT INTO users (name_e, telefono_e, antiguedad_e, campana_e, sede_e, coordinador_e, nombre_r, telefono_r, telefono_rii, campana_r, sede_r, estado, fecha)" +
     "VALUES" + 
-    `('${name_e}', ${documento_e}, ${telefono_e}, '${antiguedad_e}', '${campana_e}', '${sede_e}', '${coordinador_e}', '${nombre_r}', ${telefono_r}, ${telefono_rii}, '${campana_r}', '${sede_r}', 'Pendiente', NOW())`
+    `('${name_e}', ${documento_e}, ${telefono_e}, '${antiguedad_e}', '${campana_e}', '${sede_e}', '${nombre_r}', ${telefono_r}, ${telefono_rii}, '${campana_r_1 + campana_r_2  + campana_r_3 + campana_r_4 + campana_r_5}', '${sede_r_1 + sede_r_2 + sede_r_3 + sede_r_4 + sede_r_5 + sede_r_6 + sede_r_7}', 'Pendiente', NOW())`
 
     conn.query(createSql,(err, result) => {
         if (err) {
