@@ -22,7 +22,7 @@ methods_crud.crear = (req, res) => {
     const sede_e = req.body.sede_e;
     const nombre_r = req.body.name_r;
     const telefono_r = req.body.telefono_r;
-    const telefono_rii = req.body.telefono_rii != undefined ? req.body.telefono_rii : '';
+    const telefono_rii = req.body.telefono_rii != '' ? req.body.telefono_rii : '000';
 
     const campana_r_1 = req.body.campana_r_1 != undefined ? req.body.campana_r_1 : '';
     const campana_r_2 = req.body.campana_r_2 != undefined ? req.body.campana_r_2 : '';
