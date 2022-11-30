@@ -39,7 +39,7 @@ methods_crud.crear = (req, res) => {
     const sede_r_7 = req.body.sede_r_7 != undefined ? req.body.sede_r_7 : '';
 
     let createSql = 
-    "INSERT INTO users (name_e, telefono_e, antiguedad_e, campana_e, sede_e, coordinador_e, nombre_r, telefono_r, telefono_rii, campana_r, sede_r, estado, fecha)" +
+    "INSERT INTO users (name_e, documento_e, telefono_e, antiguedad_e, campana_e, sede_e, coordinador_e, nombre_r, telefono_r, telefono_rii, campana_r, sede_r, estado, fecha)" +
     "VALUES" + 
     `('${name_e}', ${documento_e}, ${telefono_e}, '${antiguedad_e}', '${campana_e}', '${sede_e}', '${nombre_r}', ${telefono_r}, ${telefono_rii}, '${campana_r_1 + campana_r_2  + campana_r_3 + campana_r_4 + campana_r_5}', '${sede_r_1 + sede_r_2 + sede_r_3 + sede_r_4 + sede_r_5 + sede_r_6 + sede_r_7}', 'Pendiente', NOW())`
 
