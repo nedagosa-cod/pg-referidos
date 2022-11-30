@@ -584,4 +584,12 @@ svg {
   line-height: 3.5rem;
 }
 
+.alertsend {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: red;
+}
+
 /*# sourceMappingURL=style.css.map */
