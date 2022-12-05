@@ -12,6 +12,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/referir", (req, res) => res.render("referir", {title: 'Referidos Atento'}));
+router.get("/sendok", (req, res) => res.render("sendok", {title: 'Referidos Atento'}));
 
 router.get("/estado", methods_crud.leer);
 router.post("/crud_crear", methods_crud.crear);

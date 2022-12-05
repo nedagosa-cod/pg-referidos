@@ -585,11 +585,20 @@ svg {
 }
 
 .alertsend {
-  position: relative;
-  top: 0;
+  position: absolute;
+  top: 30%;
   left: 0;
   width: 100%;
-  background: red;
+  text-align: center;
+}
+.alertsend span {
+  font-size: 1.8rem;
+  display: block;
+  margin: auto;
+  width: 40%;
+  height: 200px;
+  background: #38caef;
+  border: 1px solid #ff7900;
 }
 
 /*# sourceMappingURL=style.css.map */
