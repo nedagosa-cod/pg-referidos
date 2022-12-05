@@ -43,7 +43,9 @@ methods_crud.crear = (req, res) => {
     "VALUES" + 
     `('${name_e}', ${documento_e}, ${telefono_e}, '${antiguedad_e}', '${campana_e}', '${sede_e}', '${nombre_r}', ${telefono_r}, ${telefono_rii}, '${campana_r_1 + campana_r_2  + campana_r_3 + campana_r_4 + campana_r_5}', '${sede_r_1 + sede_r_2 + sede_r_3 + sede_r_4 + sede_r_5 + sede_r_6 + sede_r_7}', 'Pendiente', NOW())`
 
-    conn.query(createSql,(err, result) => {
+    let resetID = "SET @num := 0;UPDATE users SET id = @num := (@num+1);ALTER TABLE users AUTO_INCREMENT =1;"
+
+    conn.query(createSql,resetID,(err, result) => {
         if (err) {
             console.log(err)
         } else {
