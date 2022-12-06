@@ -31,7 +31,7 @@
                     <th>Telefono Referido 2</th>
                     <th>Camapaña Interes</th>
                     <th>Sede Interes</th>
-                    <th>Estado</th>
+                    <th id="estadoclick">Estado</th>
                 </thead>
                 <tbody>
                     <% resultado.forEach((datos) => { %>
@@ -56,6 +56,9 @@
                 </tbody>
             </table>
         </form>
+        <div class="total">
+            Cantidad: <%= resultado.length %>
+        </div>
     </main>
 </body>
 </html>
