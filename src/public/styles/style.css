@@ -783,6 +783,22 @@ svg {
   font-size: 2rem;
   margin: 20px auto;
   color: white;
+  font-weight: 700px;
+  text-shadow: 1px 1px 1px red;
+}
+
+.row__id {
+  text-align: center;
+  width: 50px;
+}
+.row__date {
+  width: 70px;
+}
+.row__int {
+  width: 70px;
+}
+.row__state {
+  width: 80px;
 }
 
 /*# sourceMappingURL=style.css.map */

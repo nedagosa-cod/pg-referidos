@@ -655,4 +655,22 @@ border-radius: 18px;
     font-size: 2rem;
     margin: 20px auto;
     color: white;
+    font-weight: 700px;
+    text-shadow: 1px 1px 1px red;
+}
+
+.row {
+    &__id {
+        text-align: center;
+        width: 50px;
+    }
+    &__date {
+        width: 70px;
+    }
+    &__int {
+        width: 70px;
+    }
+    &__state{
+        width: 80px;
+    }
 }

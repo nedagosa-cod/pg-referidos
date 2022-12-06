@@ -35,21 +35,21 @@
                 </thead>
                 <tbody>
                     <% resultado.forEach((datos) => { %>
-                        <tr>
-                            <td><input type="text" name="delselect_id" id="delselect_id" value="<%= datos.id %>"></td>
-                            <td><input type="text" value="<%= new Date(datos.fecha).toLocaleDateString('en-US') %>"></td>
+                        <tr class="row">
+                            <td><input class="row__id" type="text" name="delselect_id" id="delselect_id" value="<%= datos.id %>"></td>
+                            <td><input class="row__date" type="text" value="<%= new Date(datos.fecha).toLocaleDateString('en-US') %>"></td>
                             <td><input type="text" id="name_e" name="name_e" value="<%= datos.name_e %>"></td>
-                            <td><input type="text" id="documento_e" name="documento_e" value="<%= datos.documento_e %>"></td>
-                            <td><input type="text" id="telefono_e" name="telefono_e" value="<%= datos.telefono_e %>"></td>
+                            <td><input class="row__int" type="text" id="documento_e" name="documento_e" value="<%= datos.documento_e %>"></td>
+                            <td><input class="row__int" type="text" id="telefono_e" name="telefono_e" value="<%= datos.telefono_e %>"></td>
                             <td><input type="text" id="antiguedad_e" name="antiguedad_e" value="<%= datos.antiguedad_e %>"></td>
                             <td><input type="text" id="campana_e" name="campana_e" value="<%= datos.campana_e %>"></td>
                             <td><input type="text" id="sede_e" name="sede_e" value="<%= datos.sede_e %>"></td>
                             <td><input type="text" id="nombre_r" name="nombre_r" value="<%= datos.nombre_r %>"></td>
-                            <td><input type="text" id="telefono_r" name="telefono_r" value="<%= datos.telefono_r %>"></td>
-                            <td><input type="text" id="telefono_rii" name="telefono_rii" value="<%= datos.telefono_rii %>"></td>
+                            <td><input class="row__int" type="text" id="telefono_r" name="telefono_r" value="<%= datos.telefono_r %>"></td>
+                            <td><input class="row__int" type="text" id="telefono_rii" name="telefono_rii" value="<%= datos.telefono_rii %>"></td>
                             <td><input type="text" id="campana_r" name="campana_r" value="<%= datos.campana_r %>"></td>
                             <td><input type="text" id="sede_r" name="sede_r" value="<%= datos.sede_r %>"></td>
-                            <td><input type="text" id="estado" name="estado" value="<%= datos.estado %>"></td>
+                            <td><input class="row__state" type="text" id="estado" name="estado" value="<%= datos.estado %>"></td>
                             <td><a href="/crud_editar/<%= datos.id %>">Editar</a></td>
                         </tr>
                     <% }); %>
