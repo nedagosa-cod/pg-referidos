@@ -15,6 +15,9 @@
     <%- include('partials/navBar.ejs') %>
     <main class="over-table">
         <h1 class="over-table__title">Gestión de referidos</h1>
+        <div class="total">
+            Cantidad Total de Referidos: <%= resultado.length %>
+        </div>
         <form class="box-table" action="crud_actualizar" method="post">
             <table class="table-loggin">
                 <thead>
@@ -56,9 +59,6 @@
                 </tbody>
             </table>
         </form>
-        <div class="total">
-            Cantidad: <%= resultado.length %>
-        </div>
     </main>
 </body>
 </html>

@@ -554,7 +554,7 @@ svg {
 .table-loggin {
   text-align: center;
   background: #f8f9fa;
-  margin: 20px auto;
+  margin: 0 auto 20px auto;
   width: 150%;
   border: 1px solid red;
   overflow-x: auto;
@@ -573,6 +573,7 @@ svg {
 .box-table {
   width: 100%;
   overflow-x: auto;
+  height: 65vh;
 }
 .box-table::-webkit-scrollbar {
   width: 10px;
@@ -781,10 +782,11 @@ svg {
 
 .total {
   font-size: 2rem;
-  margin: 20px auto;
-  color: white;
+  background: #FFAD80;
+  padding: 3px 0;
+  color: #01426a;
   font-weight: 700px;
-  text-shadow: 1px 1px 1px red;
+  border: 1px solid #ff7900;
 }
 
 .row__id {
@@ -799,6 +801,7 @@ svg {
 }
 .row__state {
   width: 80px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -16,7 +16,7 @@
     <main class="main">
         <h1 class="main__title">Verificación de estado de referido</h1>
         <form class="bx-search" action="/crud_buscar" method="post">
-            <input placeholder="Cédula empleado para buscar referido" type="text" class="bx-search__input" id="searchCedula" name="searchCedula" required="" autocomplete="off">
+            <input placeholder="Cédula empleado para buscar referido" type="text" class="bx-search__input" id="searchCedula" name="searchCedula" required="">
             <button type="submit" class="bx-search__search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
         <% if (search) { %>
@@ -33,33 +33,33 @@
                     </tr>
                 </tbody>
             </table>
+            <table class="table-estado">
+                <thead>
+                    <th>ID</th>
+                    <th>FECHA REGISTRO</th>
+                    <th>NOMBRE REFERIDO</th>
+                    <th>TELEFONOS REFERIDO</th>
+                    <th>CAMPAÑA INTERES</th>
+                    <th>SEDE</th>
+                    <th>ESTADO</th>
+                </thead>
+                <tbody>
+                    <% for (let a=0;a<filas.length;a++) { %>
+                        <% if (filas[a].documento_e == searchCedula) { %>                    
+                            <tr>
+                                <td><input class="row__id" type="text" value="<%= filas[a].id %>"></td>
+                                <td><input class="row__date" type="text" value="<%= new Date(filas[a].fecha).toLocaleDateString('es-ES') %>"></td>
+                                <td><input type="text" value="<%= filas[a].nombre_r %>"></td>
+                                <td><input type="text" value="<%= filas[a].telefono_r %> - <%= filas[a].telefono_rii %>"></td>
+                                <td><input type="text" value="<%= filas[a].campana_r %>"></td>
+                                <td><input type="text" value="<%= filas[a].sede_r %>"></td>
+                                <td><input class="row__state" type="text" value="<%= filas[a].estado %>"></td>
+                            </tr>
+                        <% } %>
+                    <% }; %>
+                </tbody>
+            </table>
         <% } %> 
-        <table class="table-estado">
-            <thead>
-                <th>ID</th>
-                <th>FECHA REGISTRO</th>
-                <th>NOMBRE REFERIDO</th>
-                <th>TELEFONOS REFERIDO</th>
-                <th>CAMPAÑA INTERES</th>
-                <th>SEDE</th>
-                <th>ESTADO</th>
-            </thead>
-            <tbody>
-                <% for (let a=0;a<filas.length;a++) { %>
-                    <% if (filas[a].documento_e == searchCedula) { %>                    
-                        <tr>
-                            <td><input disabled class="row__id" type="text" value="<%= filas[a].id %>"></td>
-                            <td><input disabled class="row__date" type="text" value="<%= new Date(filas[a].fecha).toLocaleDateString('es-ES') %>"></td>
-                            <td><input disabled type="text" value="<%= filas[a].nombre_r %>"></td>
-                            <td><input disabled type="text" value="<%= filas[a].telefono_r %> - <%= filas[a].telefono_rii %>"></td>
-                            <td><input disabled type="text" value="<%= filas[a].campana_r %>"></td>
-                            <td><input disabled type="text" value="<%= filas[a].sede_r %>"></td>
-                            <td><input disabled class="row__state" type="text" value="<%= filas[a].estado %>"></td>
-                        </tr>
-                    <% } %>
-                <% }; %>
-            </tbody>
-        </table>
     </main>
 </body>
 </html>
